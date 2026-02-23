@@ -16,7 +16,7 @@ const mainContainer = document.querySelector('main');
 const filterSection = document.getElementById('filtered-section');
 const filterCards = document.getElementById('filtered-cards');
 
-function calcucateCount(){
+function calculateCount(){
     total.innerText = allCardSection.children.length
     interviewCount.innerText = interviewList.length
     rejectedCount.innerText = rejectedList.length
@@ -33,7 +33,7 @@ function calcucateCount(){
     }
 }
 
-calcucateCount()
+calculateCount()
 
 // Buttons Select with Color
 function toggleStyle(id) {
@@ -68,7 +68,7 @@ function toggleStyle(id) {
         filterSection.classList.add('hidden');
     }
 
-    calcucateCount();
+    calculateCount();
 }
 
 // clicks and events
@@ -108,7 +108,7 @@ if(currentStatus == "interview-filter-btn"){
         renderRejected();
     }
 
-    calcucateCount()
+    calculateCount()
 
 }else if(event.target.classList.contains('rejected-btn')){
     
@@ -143,13 +143,13 @@ if(currentStatus == "interview-filter-btn"){
         renderRejected();
     }
 
-    calcucateCount()
+    calculateCount()
 
 
 
     }
     
-    // Detele button 
+    // Delete button 
     else if (
     event.target.classList.contains('eraseBtn') ||
     event.target.parentNode.classList.contains('eraseBtn')
@@ -169,7 +169,7 @@ if(currentStatus == "interview-filter-btn"){
 
     card.remove();
 
-    calcucateCount();
+    calculateCount();
 
     if (currentStatus == 'interview-filter-btn') {
         renderInterview();
