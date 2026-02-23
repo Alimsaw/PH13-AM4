@@ -197,7 +197,7 @@ function renderInterview() {
     filterSection.classList.add('hidden');
     for (let interview of interviewList) {
         let div = document.createElement('div');
-        div.className = 'flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]'
+        div.className = 'flex justify-between border text-[#F1F2F4] bg-white p-[24px] rounded-[8px]'
         div.innerHTML = `
                     <div class="space-y-[20px]">
                     <div>
@@ -238,7 +238,7 @@ function renderRejected() {
     filterSection.classList.add('hidden');
     for (let rejected of rejectedList) {
         let div = document.createElement('div');
-        div.className = 'flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]'
+        div.className = 'flex justify-between border text-[#F1F2F4] bg-white p-[24px] rounded-[8px]'
         div.innerHTML = `
                     <div class="space-y-[20px]">
                     <div>
