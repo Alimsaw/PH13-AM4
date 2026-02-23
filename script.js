@@ -145,8 +145,6 @@ if(currentStatus == "interview-filter-btn"){
 
     calculateCount()
 
-
-
     }
     
     // Delete button 
@@ -179,9 +177,6 @@ if(currentStatus == "interview-filter-btn"){
 }
 
     console.log({interviewList, rejectedList})
-
-    
-    
 
 })
 
