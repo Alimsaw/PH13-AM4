@@ -14,6 +14,7 @@ const rejectedFilterBtn = document.getElementById('rejected-filter-btn');
 const allCardSection = document.getElementById('allCards');
 const mainContainer = document.querySelector('main');
 const filterSection = document.getElementById('filtered-section');
+const filterCards = document.getElementById('filtered-cards');
 
 function calcucateCount(){
     total.innerText = allCardSection.children.length
@@ -25,41 +26,42 @@ function calcucateCount(){
 calcucateCount()
 
 // Buttons Select with Color
-function toggleStyle (id){
-    allFilterBtn.classList.remove('bg-[#3B82F6]', 'text-white')
-    interviewFilterBtn.classList.remove('bg-[#3B82F6]', 'text-white')
-    rejectedFilterBtn.classList.remove('bg-[#3B82F6]', 'text-white')
+function toggleStyle(id) {
 
-    allFilterBtn.classList.add('bg-white', 'text-black')
-    interviewFilterBtn.classList.add('bg-white', 'text-black')
-    rejectedFilterBtn.classList.add('bg-white', 'text-black')
+    allFilterBtn.classList.remove('bg-[#3B82F6]', 'text-white');
+    interviewFilterBtn.classList.remove('bg-[#3B82F6]', 'text-white');
+    rejectedFilterBtn.classList.remove('bg-[#3B82F6]', 'text-white');
 
+    allFilterBtn.classList.add('bg-white', 'text-black');
+    interviewFilterBtn.classList.add('bg-white', 'text-black');
+    rejectedFilterBtn.classList.add('bg-white', 'text-black');
 
-    const selected = document.getElementById(id)
-    currentStatus = id
-    // currentStatus = id
-    // console.log(currentStatus);
+    const selected = document.getElementById(id);
+    selected.classList.remove('bg-white', 'text-black');
+    selected.classList.add('bg-[#3B82F6]', 'text-white');
 
-    selected.classList.remove('bg-white', 'text-black')
-    selected.classList.add('bg-[#3B82F6]', 'text-white')
+    currentStatus = id;
 
-    // interview button action
-    if(id == 'interview-filter-btn'){
+    if (id === 'interview-filter-btn') {
         allCardSection.classList.add('hidden');
-        filterSection.classList.remove('hidden');
-        renderInterview()
-    }else if(id =='all-filter-btn'){
+        filterCards.classList.remove('hidden');
+        renderInterview();
+
+    } else if (id === 'rejected-filter-btn') {
+        allCardSection.classList.add('hidden');
+        filterCards.classList.remove('hidden');
+        renderRejected();
+
+    } else {
         allCardSection.classList.remove('hidden');
+        filterCards.innerHTML = '';
         filterSection.classList.add('hidden');
-    }else if(id=='rejected-filter-btn'){
-        allCardSection.classList.add('hidden');
-        filterSection.classList.remove('hidden');
-        renderRejected()
     }
-
 }
 
+// clicks and events
 mainContainer.addEventListener('click', function(event){
+        console.log(currentStatus, event.target.classList)
     if(event.target.classList.contains('interview-btn')){
     
     const parentNode = event.target.parentNode.parentNode;
@@ -87,11 +89,13 @@ mainContainer.addEventListener('click', function(event){
     }
 
     rejectedList = rejectedList.filter(item => item.jobName != cardInfo.jobName)
-
-    if (currentStatus == 'rejected-filter-btn'){
+    console.log(currentStatus)
+if(currentStatus == "interview-filter-btn"){
+        renderInterview();
+    }else if (currentStatus == "rejected-filter-btn"){
         renderRejected();
     }
-    
+
     calcucateCount()
 
 }else if(event.target.classList.contains('rejected-btn')){
@@ -123,6 +127,8 @@ mainContainer.addEventListener('click', function(event){
 
     if(currentStatus == "interview-filter-btn"){
         renderInterview();
+    }else if (currentStatus == "rejected-filter-btn"){
+        renderRejected();
     }
 
     calcucateCount()
@@ -130,13 +136,20 @@ mainContainer.addEventListener('click', function(event){
 
 
     }
+    console.log({interviewList, rejectedList})
 
 })
 
 
 function renderInterview() {
-    filterSection.innerHTML = ''
+    filterCards.innerHTML = '';
 
+    if (interviewList.length === 0) {
+        filterSection.classList.remove('hidden');  
+        return;
+    }
+
+    filterSection.classList.add('hidden');
     for (let interview of interviewList) {
         let div = document.createElement('div');
         div.className = 'flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]'
@@ -164,14 +177,20 @@ function renderInterview() {
                     </div>
                 </div>
         `
-    filterSection.appendChild(div)
+    filterCards.appendChild(div)
     }
 
 }
 
 function renderRejected() {
-    filterSection.innerHTML = ''
+      filterCards.innerHTML = '';
 
+    if (rejectedList.length === 0) {
+        filterSection.classList.remove('hidden');
+        return;
+    }
+
+    filterSection.classList.add('hidden');
     for (let rejected of rejectedList) {
         let div = document.createElement('div');
         div.className = 'flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]'
@@ -199,7 +218,7 @@ function renderRejected() {
                     </div>
                 </div>
         `
-    filterSection.appendChild(div)
+    filterCards.appendChild(div)
     }
 
 }
