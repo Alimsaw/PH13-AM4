@@ -63,6 +63,16 @@
             <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn max-w-[80px]">Rejected</button>
         </div>
 
+        <!-- Filtered Section -->
+        <div id="filtered-section" class="hidden">
+                <div class="flex flex-col justify-center items-center mx-auto 2xl:px-[40px] xl:px[35px] lg:px-[30px] md:px-[25px] sm:px-[20px] px-[20px]">
+                    <img src="./images/jobs.png" alt="" class="w-[100px] mb-[20px]">
+                    <p class="text-[#002C5C] text-[20px] font-semibold mb-[4px]">No jobs available</p>
+                    <p class="font-medium text-[16px] text-[#64748B]">Check back soon for new job opportunities</p>
+                </div>
+        </div>
+
+
         <!-- cards -->
         <div id="allCards" class="flex gap-[16px] flex-col">
 
@@ -70,19 +80,19 @@
             <div class="flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]">
                 <div class="space-y-[20px]">
                     <div>
-                        <p class="font-semibold text-[18px] text-[#002C5C]">Mobile First Corp</p>
-                        <p class="font-normal text-[16px] text-[#64748B]">React Native Developer</p>
+                        <p class="companyName font-semibold text-[18px] text-[#002C5C]">Mobile First Corp</p>
+                        <p class="jobName font-normal text-[16px] text-[#64748B]">React Native Developer</p>
                     </div>
                      <div>
-                         <p class="font-normal text-[14px] text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                         <p class="jobDescription font-normal text-[14px] text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
                      </div>
                      <div class="flex flex-col gap-2">
-                        <p class="font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
-                        <p class="font-normal text-[14px] text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="statusBtn font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
+                        <p class="notes font-normal text-[14px] text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                       </div>
                      <div class="flex gap-2">
-                        <button class="btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
-                        <button class="btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
+                        <button class="interview-btn btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
+                        <button class="rejected-btn btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -95,19 +105,19 @@
             <div class="flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]">
                 <div class="space-y-[20px]">
                     <div>
-                        <p class="font-semibold text-[18px] text-[#002C5C]">WebFlow Agency</p>
-                        <p class="font-normal text-[16px] text-[#64748B]">Web Designer & Developer</p>
+                        <p class="companyName font-semibold text-[18px] text-[#002C5C]">WebFlow Agency</p>
+                        <p class="jobName font-normal text-[16px] text-[#64748B]">Web Designer & Developer</p>
                     </div>
                      <div>
-                         <p class="font-normal text-[14px] text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                         <p class="jobDescription font-normal text-[14px] text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                      </div>
                      <div class="flex flex-col gap-2">
-                        <p class="font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
-                        <p class="font-normal text-[14px] text-[#323B49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <p class="status-btn font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
+                        <p class="notes font-normal text-[14px] text-[#323B49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                       </div>
                      <div class="flex gap-2">
-                        <button class="btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
-                        <button class="btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
+                        <button class="interview-btn btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
+                        <button class="rejected-btn btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -120,19 +130,19 @@
             <div class="flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]">
                 <div class="space-y-[20px]">
                     <div>
-                        <p class="font-semibold text-[18px] text-[#002C5C]">DataViz Solutions</p>
-                        <p class="font-normal text-[16px] text-[#64748B]">Data Visualization Specialist</p>
+                        <p class="companyName font-semibold text-[18px] text-[#002C5C]">DataViz Solutions</p>
+                        <p class="jobName font-normal text-[16px] text-[#64748B]">Data Visualization Specialist</p>
                     </div>
                      <div>
-                         <p class="font-normal text-[14px] text-[#64748B]">Boston, MA • Full-time • $125,000 - $165,000</p>
+                         <p class="jobDescription font-normal text-[14px] text-[#64748B]">Boston, MA • Full-time • $125,000 - $165,000</p>
                      </div>
                      <div class="flex flex-col gap-2">
-                        <p class="font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
-                        <p class="font-normal text-[14px] text-[#323B49]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                        <p class="status-btn font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
+                        <p class="notes font-normal text-[14px] text-[#323B49]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                       </div>
                      <div class="flex gap-2">
-                        <button class="btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
-                        <button class="btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
+                        <button class="interview-btn btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
+                        <button class="rejected-btn btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -145,19 +155,19 @@
             <div class="flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]">
                 <div class="space-y-[20px]">
                     <div>
-                        <p class="font-semibold text-[18px] text-[#002C5C]">CloudFirst Inc</p>
-                        <p class="font-normal text-[16px] text-[#64748B]">Backend Developer</p>
+                        <p class="companyName font-semibold text-[18px] text-[#002C5C]">CloudFirst Inc</p>
+                        <p class="jobName font-normal text-[16px] text-[#64748B]">Backend Developer</p>
                     </div>
                      <div>
-                         <p class="font-normal text-[14px] text-[#64748B]">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                         <p class="jobDescription font-normal text-[14px] text-[#64748B]">Seattle, WA • Full-time • $140,000 - $190,000</p>
                      </div>
                      <div class="flex flex-col gap-2">
-                        <p class="font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
-                        <p class="font-normal text-[14px] text-[#323B49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                        <p class="status-btn font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
+                        <p class="notes font-normal text-[14px] text-[#323B49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                       </div>
                      <div class="flex gap-2">
-                        <button class="btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
-                        <button class="btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
+                        <button class="interview-btn btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
+                        <button class="rejected-btn btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -170,19 +180,19 @@
             <div class="flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]">
                 <div class="space-y-[20px]">
                     <div>
-                        <p class="font-semibold text-[18px] text-[#002C5C]">Innovation Labs</p>
-                        <p class="font-normal text-[16px] text-[#64748B]">UI/UX Engineer</p>
+                        <p class="companyName font-semibold text-[18px] text-[#002C5C]">Innovation Labs</p>
+                        <p class="jobName font-normal text-[16px] text-[#64748B]">UI/UX Engineer</p>
                     </div>
                      <div>
-                         <p class="font-normal text-[14px] text-[#64748B]">Austin, TX • Full-time • $110,000 - $150,000</p>
+                         <p class="jobDescription font-normal text-[14px] text-[#64748B]">Austin, TX • Full-time • $110,000 - $150,000</p>
                      </div>
                      <div class="flex flex-col gap-2">
-                        <p class="font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
-                        <p class="font-normal text-[14px] text-[#323B49]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                        <p class="status-btn font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
+                        <p class="notes font-normal text-[14px] text-[#323B49]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                       </div>
                      <div class="flex gap-2">
-                        <button class="btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
-                        <button class="btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
+                        <button class="interview-btn btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
+                        <button class="rejected-btn btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -195,19 +205,19 @@
             <div class="flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]">
                 <div class="space-y-[20px]">
                     <div>
-                        <p class="font-semibold text-[18px] text-[#002C5C]">MegaCorp Solutions</p>
-                        <p class="font-normal text-[16px] text-[#64748B]">JavaScript Developer</p>
+                        <p class="companyName font-semibold text-[18px] text-[#002C5C]">MegaCorp Solutions</p>
+                        <p class="jobName font-normal text-[16px] text-[#64748B]">JavaScript Developer</p>
                     </div>
                      <div>
-                         <p class="font-normal text-[14px] text-[#64748B]">New York, NY • Full-time • $130,000 - $170,00</p>
+                         <p class="jobDescription font-normal text-[14px] text-[#64748B]">New York, NY • Full-time • $130,000 - $170,00</p>
                      </div>
                      <div class="flex flex-col gap-2">
-                        <p class="font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
-                        <p class="font-normal text-[14px] text-[#323B49]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                        <p class="status-btn font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
+                        <p class="notes font-normal text-[14px] text-[#323B49]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                       </div>
                      <div class="flex gap-2">
-                        <button class="btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
-                        <button class="btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
+                        <button class="interview-btn btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
+                        <button class="rejected-btn btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -220,19 +230,19 @@
             <div class="flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]">
                 <div class="space-y-[20px]">
                     <div>
-                        <p class="font-semibold text-[18px] text-[#002C5C]">StartupXYZ</p>
-                        <p class="font-normal text-[16px] text-[#64748B]">Full Stack Engineer</p>
+                        <p class="companyName font-semibold text-[18px] text-[#002C5C]">StartupXYZ</p>
+                        <p class="jobName font-normal text-[16px] text-[#64748B]">Full Stack Engineer</p>
                     </div>
                      <div>
-                         <p class="font-normal text-[14px] text-[#64748B]">Remote • Full-time • $120,000 - $160,000</p>
+                         <p class="jobDescription font-normal text-[14px] text-[#64748B]">Remote • Full-time • $120,000 - $160,000</p>
                      </div>
                      <div class="flex flex-col gap-2">
-                        <p class="font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
-                        <p class="font-normal text-[14px] text-[#323B49]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                        <p class="status-btn font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
+                        <p class="notes font-normal text-[14px] text-[#323B49]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                       </div>
                      <div class="flex gap-2">
-                        <button class="btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
-                        <button class="btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
+                        <button class="interview-btn btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
+                        <button class="rejected-btn btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -245,19 +255,19 @@
             <div class="flex justify-between border-[#F1F2F4] bg-white p-[24px] rounded-[8px]">
                 <div class="space-y-[20px]">
                     <div>
-                        <p class="font-semibold text-[18px] text-[#002C5C]">TechCorp Industries</p>
-                        <p class="font-normal text-[16px] text-[#64748B]">Senior Frontend Developer</p>
+                        <p class="companyName font-semibold text-[18px] text-[#002C5C]">TechCorp Industries</p>
+                        <p class="jobName font-normal text-[16px] text-[#64748B]">Senior Frontend Developer</p>
                     </div>
                      <div>
-                         <p class="font-normal text-[14px] text-[#64748B]">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                         <p class="jobDescription font-normal text-[14px] text-[#64748B]">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                      </div>
                      <div class="flex flex-col gap-2">
-                        <p class="font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
-                        <p class="font-normal text-[14px] text-[#323B49]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                        <p class="status-btn font-medium text-[14px] text-[#002C5C] rounded-1 bg-[#EEF4FF] py-[8px] px-[12px] rounded-[4px] w-fit uppercase">Not Applied</p>
+                        <p class="notes font-normal text-[14px] text-[#323B49]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                       </div>
                      <div class="flex gap-2">
-                        <button class="btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
-                        <button class="btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
+                        <button class="interview-btn btn text-green-600 bg-white border-green-600 uppercase font-semibold text-[14px]">interview</button>
+                        <button class="rejected-btn btn text-[#EF4444] bg-white border-[#EF4444] uppercase font-semibold text-[14px]">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -266,6 +276,7 @@
                     </div>
                 </div>
             </div>
+
             
         </div>
     </main>
