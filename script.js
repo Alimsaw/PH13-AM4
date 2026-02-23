@@ -20,7 +20,17 @@ function calcucateCount(){
     total.innerText = allCardSection.children.length
     interviewCount.innerText = interviewList.length
     rejectedCount.innerText = rejectedList.length
-    totalJob.innerText = allCardSection.children.length
+    // totalJob.innerText = allCardSection.children.length
+
+        if(currentStatus === 'interview-filter-btn'){
+        totalJob.innerText = interviewList.length
+    }
+    else if(currentStatus === 'rejected-filter-btn'){
+        totalJob.innerText = rejectedList.length
+    }
+    else{
+        totalJob.innerText = allCardSection.children.length
+    }
 }
 
 calcucateCount()
@@ -57,6 +67,8 @@ function toggleStyle(id) {
         filterCards.innerHTML = '';
         filterSection.classList.add('hidden');
     }
+
+    calcucateCount();
 }
 
 // clicks and events
@@ -136,7 +148,40 @@ if(currentStatus == "interview-filter-btn"){
 
 
     }
+    
+    // Detele button 
+    else if (
+    event.target.classList.contains('eraseBtn') ||
+    event.target.parentNode.classList.contains('eraseBtn')
+) {
+
+    const eraseBtn = event.target.classList.contains('eraseBtn')
+        ? event.target
+        : event.target.parentNode;
+
+    const card = eraseBtn.parentNode.parentNode;
+
+    const companyName = card.querySelector('.companyName').innerText
+    const jobName = card.querySelector('.jobName').innerText
+
+    interviewList = interviewList.filter(item => item.companyName != companyName && item.jobName != jobName)
+    rejectedList = rejectedList.filter(item => item.companyName != companyName && item.jobName != jobName)
+
+    card.remove();
+
+    calcucateCount();
+
+    if (currentStatus == 'interview-filter-btn') {
+        renderInterview();
+    }else if (currentStatus == 'rejected-filter-btn') {
+        renderRejected();
+    }
+}
+
     console.log({interviewList, rejectedList})
+
+    
+    
 
 })
 
@@ -172,7 +217,7 @@ function renderInterview() {
                     </div>
                 </div>
                 <div>
-                    <div class="w-[35px] border rounded-[40px] p-[6px] text-[#F1F2F4]">
+                    <div class="eraseBtn w-[35px] border rounded-[40px] p-[6px] text-[#F1F2F4]">
                         <img src="./images/Trash.png" alt="">
                     </div>
                 </div>
@@ -213,7 +258,7 @@ function renderRejected() {
                     </div>
                 </div>
                 <div>
-                    <div class="w-[35px] border rounded-[40px] p-[6px] text-[#F1F2F4]">
+                    <div class="eraseBtn w-[35px] border rounded-[40px] p-[6px] text-[#F1F2F4]">
                         <img src="./images/Trash.png" alt="">
                     </div>
                 </div>
